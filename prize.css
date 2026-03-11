@@ -1,0 +1,116 @@
+.prize-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.prize-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.prize-box {
+  text-align: center;
+  background: linear-gradient(160deg, #0f3460, #0a1f3d);
+  border: 3px solid #f6b73c;
+  border-radius: 28px;
+  padding: 48px 44px;
+  max-width: min(90vw, 540px);
+  box-shadow: 0 0 60px rgba(246, 183, 60, 0.35), 0 30px 60px rgba(0, 0, 0, 0.6);
+  animation: prizePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes prizePop {
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+.prize-emoji {
+  font-size: 5.5rem;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.prize-title {
+  margin: 0 0 8px;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  color: #f6b73c;
+  letter-spacing: 0.07em;
+  text-shadow: 0 0 24px rgba(246, 183, 60, 0.55);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.prize-sub {
+  margin: 0 0 10px;
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  color: #eaf4ff;
+  font-weight: 700;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.prize-achievement {
+  margin: 0 0 12px;
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  color: #b2ffe3;
+  font-weight: 600;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  min-height: 1.4em;
+}
+
+.prize-cta {
+  margin: 0 0 30px;
+  font-size: clamp(0.85rem, 1.8vw, 1rem);
+  color: #a0c4d8;
+  font-style: italic;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.prize-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.prize-btn-play,
+.prize-btn-menu {
+  min-height: 54px;
+  padding: 0 28px;
+  border-radius: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.prize-btn-play {
+  background: linear-gradient(180deg, #f6b73c, #d9921a);
+  color: #1a0e00;
+  border: none;
+}
+
+.prize-btn-play:active {
+  transform: scale(0.97);
+}
+
+.prize-btn-menu {
+  background: transparent;
+  color: #eaf4ff;
+  border: 2px solid rgba(255, 255, 255, 0.38);
+}
+
+.prize-btn-menu:active {
+  transform: scale(0.97);
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>Simon Says</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../prize.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="top-actions">
+      <a href="../../index.html" class="menu-btn">Voltar ao menu</a>
+    </div>
+
+    <h1>Simon Says</h1>
+    <p id="level-display">Nivel: <span id="level-num">-</span></p>
+
+    <div id="game-container">
+      <div class="color-btn" id="green"></div>
+      <div class="color-btn" id="red"></div>
+      <div class="color-btn" id="yellow"></div>
+      <div class="color-btn" id="blue"></div>
+    </div>
+
+    <button id="start-btn">Iniciar Jogo</button>
+    <p id="level-message"></p>
+
+    <div id="prize-overlay" class="prize-overlay">
+      <div class="prize-box">
+        <div class="prize-emoji">&#127942;</div>
+        <h2 class="prize-title">PARABENS!</h2>
+        <p class="prize-sub">Voce ganhou um premio!</p>
+        <p class="prize-achievement" id="prize-achievement"></p>
+        <p class="prize-cta">Mostre esta tela a um dos nossos colaboradores</p>
+        <div class="prize-actions">
+          <button class="prize-btn-play" type="button" onclick="location.reload()">Jogar de novo</button>
+          <a class="prize-btn-menu" href="../../index.html">Voltar ao menu</a>
+        </div>
+      </div>
+    </div>
+    <script src="../prize.js"></script>
+  </body>
+</html>

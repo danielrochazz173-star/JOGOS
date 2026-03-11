@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <title>Tower Blocks</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../prize.css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+    <div class="top-actions">
+      <a href="../../index.html" class="menu-btn">Voltar ao menu</a>
+    </div>
+    <div id="container">
+      <div id="game"></div>
+      <div id="score">0</div>
+      <div id="instructions">
+        Toque na tela para posicionar o bloco
+      </div>
+      <div class="game-over">
+        <h2>Game Over</h2>
+        <p>Boa partida.</p>
+        <p>Toque para jogar novamente</p>
+      </div>
+      <div class="game-ready">
+        <div id="start-button">Iniciar</div>
+        <div></div>
+      </div>
+    </div>
+    <div id="prize-overlay" class="prize-overlay">
+      <div class="prize-box">
+        <div class="prize-emoji">🏆</div>
+        <h2 class="prize-title">PARABÉNS!</h2>
+        <p class="prize-sub">Você ganhou um prêmio!</p>
+        <p class="prize-achievement" id="prize-achievement"></p>
+        <p class="prize-cta">Mostre esta tela a um dos nossos colaboradores</p>
+        <div class="prize-actions">
+          <button class="prize-btn-play" type="button" onclick="location.reload()">Jogar de novo</button>
+          <a class="prize-btn-menu" href="../../index.html">Voltar ao menu</a>
+        </div>
+      </div>
+    </div>
+    <script src="../prize.js"></script>
+  </body>
+</html>

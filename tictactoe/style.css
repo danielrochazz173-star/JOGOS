@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #21455f, #112432 70%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  touch-action: manipulation;
+}
+
+.top-actions {
+  width: min(100%, 460px);
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 12px;
+}
+
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 14px;
+  color: #f3f7fa;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.22);
+}
+
+h1 {
+  color: white;
+  font-size: clamp(1.4rem, 4.8vw, 2rem);
+  padding: 5px 50px;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 50px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  border: 2px solid black;
+}
+
+.box {
+  width: min(26vw, 120px);
+  height: min(26vw, 120px);
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.box img {
+  width: min(18vw, 75px);
+}
+
+.status {
+  margin: 20px 0;
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+  color: black;
+}
+
+button {
+  min-height: 56px;
+  padding: 10px 24px;
+  font-size: 20px;
+  font-weight: 500;
+  color: white;
+  background-color: #07131f;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.win {
+  animation: winAnim ease-in-out 1s infinite;
+}
+
+@keyframes winAnim {
+  0% {
+    background-color: green;
+  }
+  100% {
+    background-color: lightgreen;
+  }
+}
+
+@media (max-width: 520px) {
+  .status {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 18px;
+  }
+}

@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at 50% 0%, #1b3a52, #0b1e2d 60%);
+  color: #eaf4ff;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  touch-action: manipulation;
+}
+
+.top-actions {
+  position: fixed;
+  top: 14px;
+  left: 14px;
+  z-index: 20;
+}
+
+.menu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 14px;
+  color: #eaf4ff;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.35);
+  font-size: 0.9rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f6b73c;
+  text-shadow: 0 0 20px rgba(246, 183, 60, 0.4);
+  margin-bottom: 6px;
+}
+
+#level-display {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: #d0e8f8;
+  margin-bottom: 22px;
+  min-height: 1.8em;
+}
+
+#level-num {
+  font-weight: 800;
+  color: #f6b73c;
+}
+
+#game-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 2.5vw, 24px);
+  margin-bottom: 28px;
+}
+
+.color-btn {
+  width: clamp(120px, 22vw, 220px);
+  height: clamp(120px, 22vw, 220px);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.4);
+  transition: transform 0.15s, filter 0.15s;
+  filter: brightness(0.6);
+}
+
+.color-btn.active {
+  transform: scale(1.06);
+  filter: brightness(1.25);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.45);
+}
+
+#green  { background: #22c55e; }
+#red    { background: #ef4444; }
+#yellow { background: #eab308; }
+#blue   { background: #3b82f6; }
+
+#start-btn {
+  min-height: 58px;
+  padding: 0 40px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 800;
+  background: linear-gradient(180deg, #f6b73c, #d9921a);
+  color: #1a0e00;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+}
+
+#start-btn:active {
+  transform: scale(0.97);
+}
+
+#level-message {
+  margin-top: 16px;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-weight: 700;
+  min-height: 1.6em;
+  color: #6ee7b7;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#level-message.show {
+  opacity: 1;
+}
